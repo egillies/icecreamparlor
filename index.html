@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Ice Cream Parlor</title>
+</head>
+
+<body>
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h1>
+                    Ice Cream Parlor
+                </h1>
+            </div>
+        </div>
+
+    </header>
+
+    <!--SECTION ICE CREAM -->
+
+    <main class="container-fluid">
+
+        <div class="row">
+
+            <!--NOTE STRAWBERRY ICE CREAM-->
+
+            <div class="col-8 menu">
+                <div class="row">
+                    <div class="col-6 p-4">
+
+                        <!--NOTE CARDS. all cards have same custom css class-->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title fs-5">
+                                    Strawberry</p>
+                                <p>$1.25</p>
+                                <img src="https://www.realfoodwithjessica.com/wp-content/uploads/2017/07/paleostrawberryicecream2.jpg"
+                                    class="card-img" alt="strawberry ice cream cone">
+                                <button onclick="addItemsToCart('Strawberry')" class="btn btn-primary">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--NOTE COOKIE DOUGH ICE CREAM-->
+
+                <div class="col-6 p-4">
+
+                    <div class="card">
+
+                        <!--NOTE CARDS. all cards have same custom css class-->
+
+                        <div class="card-body">
+                            <p class="card-title fs-5">
+                                Cookie Dough
+                            </p>
+                            <p>$1.25</p>
+                            <img src="https://celebratingsweets.com/wp-content/uploads/2014/04/Cookie-Dough-Ice-Cream-1-5.jpg'"
+                                class="card-img" alt="cookie dough ice cream cone">
+                            <button onclick="addItemsToCart('Cookie Dough')" class="btn btn-primary">Add to
+                                cart</button>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--NOTE VANILLA ICE CREAM-->
+
+            <div class="col-6 p-4">
+
+                <!--NOTE CARDS. all cards have same custom css class-->
+
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-title fs-5">
+                            Vanilla
+                        </p>
+                        <p>$1</p>
+                        <button onclick="addItemsToCart('Vanilla')" class="btn btn-primary">Add to cart</button>
+                        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/ultimate-vanilla-ice-cream-1628511695.jpg"
+                            class="card-img" alt="vanilla ice cream cone">
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--SECTION TOPPINGS-->
+
+            <div class="col-6 p-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-title fs-5">
+                            Sprinkles
+                        </p>
+                        <p>$.25</p>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Sprinkles2.jpg" class="card-img"
+                            alt="sprinkles">
+                        <button onclick="addItemsToCart('Strawberry')" class="btn btn-primary">Add to cart</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 p-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-title fs-5">
+                            Chocolate Chips
+                        </p>
+                        <p>$.25</p>
+                        <img src="https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/chocolate-chips.jpg?quality=82&strip=1&resize=640%2C360"
+                            class="card-img" alt="chocolate chips">
+                        <button onclick="addItemsToCart('Strawberry')" class="btn btn-primary">Add to cart</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!--SECTION CONTAINERS-->
+
+            <div class="col-6 p-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-title fs-5">
+                            Waffle Cone
+                        </p>
+                        <p>$2</p>
+                        <img src="https://m.media-amazon.com/images/I/71VNjBMakfL._SL1500_.jpg" class="card-img"
+                            alt="waffle cone">
+                        <button onclick="addItemsToCart('Strawberry')" class="btn btn-primary">Add to cart</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 p-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-title fs-5">
+                            Waffle Bowl
+                        </p>
+                        <p>$4</p>
+                        <img src="http://images.wbmason.com/350/L_JOY66050.jpg" class="card-img" alt="waffle bowl">
+                        <button onclick="addItemsToCart('Strawberry')" class="btn btn-primary">Add to cart</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!--SECTION cart-->
+            <div class="col-4 p-3">
+                <div class="h-100 d-flex flex-column justify-content-between">
+                    <h2>
+                        Cart
+                    </h2>
+                    <ul id="cart" class="px-5 fs-3">
+                        <!--NOTE this is where the cart updates?-->
+                    </ul>
+                    <h3>Total: $<span id="cartTotal">0</span></h3>
+                    <button onclick="checkOut()" class="btn btn-success">Checkout 🛒</button>
+                </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
